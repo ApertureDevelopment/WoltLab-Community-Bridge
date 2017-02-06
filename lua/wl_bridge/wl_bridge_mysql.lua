@@ -22,7 +22,7 @@ end
 
 function WLBridge.LoadPlayerRank()
 	print("Running LoadPlayerRank")
-	local GetRankIDQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WoltLab.UserToGroupTable).."` WHERE `userID`='"..WLBridge.DB:escape(WLBridgeSQL.User.userID).."'")
+	local GetRankIDQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WoltLab.UserToGroupTable).."` WHERE `userID`='"..WLBridgeSQL.User.userID).."'")
 	GetRankIDQ:start()
 	GetRankIDQ:wait()
 	if GetRankIDQ:getData() ~= nil and GetRankIDQ:getData()[1] ~= nil then
@@ -37,7 +37,7 @@ function WLBridge.RankPlayer()
 	
 	WLBridgeSQL.PlayerGroups = WLBridgeSQL.PlayerGroups or {}
 	for k,v in pairs(WLBridgeSQL.GroupID) do
-		local GetPlyGroups = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WoltLab.GroupTable).."` WHERE `groupID`='"..WLBridge.DB:escape(v.groupID).."'")
+		local GetPlyGroups = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WoltLab.GroupTable).."` WHERE `groupID`='"..v.groupID.."'")
 		GetPlyGroups:start()
 		GetPlyGroups:wait()
 		if GetPlyGroups:getData() ~= nil and GetPlyGroups:getData()[1] ~= nil then
