@@ -25,6 +25,10 @@ Well I made the Addon in my Free time so I am sorry if my Coding is Inefficent
 
 The Addon is for Everyone so: Sure
 
+#I found some typos#
+
+Keep them :D No but Seriously show me where they are and ill fix them
+
 #I need help with the Setup#
 
 You can always use my Support ticket System at: https://support.Aperture-Hosting.de
