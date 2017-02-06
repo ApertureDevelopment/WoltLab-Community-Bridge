@@ -1,7 +1,7 @@
 --[[
 ############################################
 #####Script made by: Aperture Hosting#######
-##Script purpose: WorldLab Community Bridge#
+##Script purpose: WoltLab Community Bridge#
 ##Other Info: WARNING! In future the config#
 #####file will get Replaced with In-Game####
 #######Configuration throught ULX (XGUI)####
@@ -26,9 +26,9 @@ WLBridge.Config.MySQL = {
 	Password = ""
 }
 --#############################
---##WorldLab Database Settings#
+--##WoltLab Database Settings#
 --#############################
-WLBridge.Config.WorldLab = {
+WLBridge.Config.WoltLab = {
 	--Your WL Version
 	Version = "WSC3.0",
 	--The Table with the User's and
@@ -39,7 +39,9 @@ WLBridge.Config.WorldLab = {
 	--The Group Table
 	GroupTable = "wcf1_user_group",
 	--The Connection Table from User to Group 
-	UserToGroupTable = "wcf1_user_to_group"
+	UserToGroupTable = "wcf1_user_to_group",
+	--If the script should use the steam OpenID plugin
+	useOpenId = false
 }
 --###########################
 --##Synchonisation Settings##
