@@ -5,6 +5,10 @@ The First Public WorldLab Community Bridge for Garry's Mod
 
 It allows you to Synchronise your WorldLab Ranks with a GMod Server
 
+#How does it work?#
+
+It reads a Profile fiels from the Database with the SteamID ( WARNING: Never trust users with their own Input they could break the whole system if there are 2 Times the same SteamID)
+
 #What Version is Supported?#
 
 Currently just Version WSC 3.0 got tested
