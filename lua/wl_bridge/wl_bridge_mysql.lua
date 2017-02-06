@@ -7,7 +7,7 @@ function WLBridge.LoadPlayer(ply)
 	WLBridgeSQL.ply = ply
 	print(ply:SteamID())
 	print(WLBridgeSQL.ply:SteamID())
-	local GetForumQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.Config.WorldLab.UserTable.."` WHERE `"..WLBridge.Config.WorldLab.UserTableSIDC.."`='"..WLBridgeSQL.ply:SteamID().."'")
+	local GetForumQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WorldLab.UserTable).."` WHERE `"..WLBridge.DB:escape(WLBridge.Config.WorldLab.UserTableSIDC).."`='"..WLBridge.DB:escape(WLBridgeSQL.ply:SteamID()).."'")
 	GetForumQ:start()
 	GetForumQ:wait()
 	GetForumQ.onSuccess = function() print("HAHA SUCCESS") end
@@ -21,7 +21,7 @@ end
 
 function WLBridge.LoadPlayerRank()
 	print("Running LoadPlayerRank")
-	local GetRankIDQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.Config.WorldLab.UserToGroupTable.."` WHERE `userID`='"..WLBridgeSQL.User.userID.."'")
+	local GetRankIDQ = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WorldLab.UserToGroupTable).."` WHERE `userID`='"..WLBridge.DB:escape(WLBridgeSQL.User.userID).."'")
 	GetRankIDQ:start()
 	GetRankIDQ:wait()
 	if GetRankIDQ:getData() ~= nil and GetRankIDQ:getData()[1] ~= nil then
@@ -36,7 +36,7 @@ function WLBridge.RankPlayer()
 	local WLBool = false
 	WLBridgeSQL.PlayerGroups = WLBridgeSQL.PlayerGroups or {}
 	for k,v in pairs(WLBridgeSQL.GroupID) do
-		local GetPlyGroups = WLBridge.DB:query("SELECT * FROM `"..WLBridge.Config.WorldLab.GroupTable.."` WHERE `groupID`='"..v.groupID.."'")
+		local GetPlyGroups = WLBridge.DB:query("SELECT * FROM `"..WLBridge.DB:escape(WLBridge.Config.WorldLab.GroupTable).."` WHERE `groupID`='"..WLBridge.DB:escape(v.groupID).."'")
 		GetPlyGroups:start()
 		GetPlyGroups:wait()
 		if GetPlyGroups:getData() ~= nil and GetPlyGroups:getData()[1] ~= nil then
