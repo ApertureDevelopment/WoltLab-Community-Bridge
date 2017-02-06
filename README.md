@@ -4,6 +4,7 @@ The First Public WorldLab Community Bridge for Garry's Mod
 #What does it do?#
 
 It allows you to Synchronise your WorldLab Ranks with a GMod Server
+WARNING: Currently it just works with ULX ( http://ulyssesmod.net/downloads.php )
 
 #How does it work?#
 
