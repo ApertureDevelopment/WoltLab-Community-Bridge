@@ -36,7 +36,7 @@ Keep them :D No but Seriously show me where they are and ill fix them
 
 #I need help with the Setup#
 
-You can always use my Support ticket System at: https://support.Aperture-Hosting.de
+You can always use my Support ticket System at: https://www.aperture-hosting.de/ticketsystem/
 
 #OTHER#
 
